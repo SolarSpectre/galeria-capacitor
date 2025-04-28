@@ -105,8 +105,7 @@ export class PhotoService {
       value: JSON.stringify(this.photos)
     });
   
-    const filename = photo.filepath
-                        .substr(photo.filepath.lastIndexOf('/') + 1);
+    const filename = photo.filepath.substr(photo.filepath.lastIndexOf('/') + 1);
   
     await Filesystem.deleteFile({
       path: filename,
