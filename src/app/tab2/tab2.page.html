@@ -7,16 +7,6 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
-        <ion-img [src]="photo.webviewPath" (click)="showActionSheet(photo, position)"></ion-img>
-        <ion-text class="ion-text-center">
-          <p>{{photo.filepath}}</p>
-        </ion-text>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
 
   <ion-fab vertical="bottom" horizontal="center" slot="fixed">
     <ion-fab-button (click)="addPhotoToGallery()">
