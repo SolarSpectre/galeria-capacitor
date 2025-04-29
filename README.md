@@ -21,3 +21,4 @@
 🌱 Branch Principal
 La rama main contiene la implementación base sin los cambios. Cada funcionalidad extra fue implementada en su respectiva rama.
 
+![imagen](https://github.com/user-attachments/assets/1fda43be-2040-4def-b2ca-b55cb5c040ee)
