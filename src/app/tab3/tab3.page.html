@@ -13,5 +13,16 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-button expand="block" (click)="loadPhotos()" class="ion-margin">
+    Mostrar Fotos
+  </ion-button>
+<ng-container *ngIf="showPhotos">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
+        <ion-img [src]="photo.webviewPath" (click)="showActionSheet(photo, position)"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ng-container>
 </ion-content>
