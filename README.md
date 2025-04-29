@@ -20,3 +20,4 @@
   
 🌱 Branch Principal
 La rama main contiene la implementación base sin los cambios. Cada funcionalidad extra fue implementada en su respectiva rama.
+
