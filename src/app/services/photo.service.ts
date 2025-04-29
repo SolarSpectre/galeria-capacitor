@@ -31,6 +31,40 @@ export class PhotoService {
       value: JSON.stringify(this.photos)
     });
   }
+  public async addNewToGallery50() {
+    const capturedPhoto = await Camera.getPhoto({
+      resultType: CameraResultType.Uri,
+      source: CameraSource.Camera,
+      quality: 10 
+    });
+  
+    const savedImageFile = await this.savePicture(capturedPhoto);
+    this.photos.unshift(savedImageFile);
+    await Preferences.set({
+      key: this.PHOTO_STORAGE,
+      value: JSON.stringify(this.photos)
+    });
+  }
+
+  public async addPhotoToGallery50() {
+    const capturedPhoto = await Camera.getPhoto({
+      resultType: CameraResultType.Uri,
+      source: CameraSource.Camera,
+      quality: 5,
+      width: 800,
+      height: 600,
+      allowEditing: true,
+      correctOrientation: false
+    });
+  
+    const savedImageFile = await this.savePicture(capturedPhoto);
+    this.photos.unshift(savedImageFile);
+    await Preferences.set({
+      key: this.PHOTO_STORAGE,
+      value: JSON.stringify(this.photos)
+    });
+  }
+
   private async savePicture(photo: Photo): Promise<UserPhoto> {
     const base64Data = await this.readAsBase64(photo);
 

@@ -7,17 +7,24 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
-        <ion-img [src]="photo.webviewPath" (click)="showActionSheet(photo, position)"></ion-img>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <!-- Contenedor de la cámara y la niebla -->
+  <div class="camera-container">
+    <!-- Esta capa de niebla se mostrará solo cuando la cámara esté activa -->
+    <div *ngIf="isCameraActive" class="fog-layer"></div>
 
-  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-    <ion-fab-button (click)="addPhotoToGallery()">
-      <ion-icon name="camera"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+
+    <!-- Botón para agregar foto con calidad 100 -->
+    <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+      <ion-fab-button (click)="addPhotoToGallery()">
+        <ion-icon name="camera"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+    <!-- Botón para agregar foto con calidad 50 -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="addPhotoToGallery50()">
+        <ion-icon name="aperture"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
 </ion-content>

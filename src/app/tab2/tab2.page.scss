@@ -1,0 +1,17 @@
+.camera-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .fog-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Fondo blanco semi-transparente */
+    backdrop-filter: blur(10px); /* Desenfoque para simular la niebla */
+    pointer-events: none; /* No interferir con los eventos de la cámara */
+  }
+  
