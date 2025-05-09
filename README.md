@@ -13,6 +13,11 @@
   Opción de captura de imagen con calidad al 50%.
   Visualización de imágenes en un nuevo tab (Tab 3).
 
+  Icono y Splash Screen
+  ![Captura de pantalla 2025-05-09 100701](https://github.com/user-attachments/assets/16c3f9b8-b5ca-4437-a243-285582f99aa5)
+
+  ![image](https://github.com/user-attachments/assets/d0e50eae-8649-46b9-9f33-17ea8e3deb0a)
+
 🛠️ Tecnologías Utilizadas
   Node.js 
   Visual Studio Code
